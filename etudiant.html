@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/etudiant.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <title>liste des etudiants</title>
+</head>
+<body>
+    <div class="container-fluid">
+        <h5>Listes des etudiants</h5>
+        <input type="button" value="nouveau" class="bg-primary ft-right" id="recap">
+
+        <table class="table table-bordered table-hover" id="tableau1">
+            <tr>
+                <thead class="thead-light">
+                    <th>Matricule</th>
+                    <th>Nom et prénom</th>
+                    <th>Date de naissance</th>
+                    <th>Lieu de naissance</th>
+                    <th>Sexe</th>
+                    <th>Parcours</th>
+                    <th>actions</th>
+                </thead>
+            </tr>
+        </table>
+
+
+    </div>
+    
+
+    <div class="container-fluid" ">
+
+        <div class="enregistre" id="zone" style="display: none;">
+            <form action="" method="post">
+
+                <fieldset>
+                    <legend>Enregistrer un boursier</legend>
+                        <div class="form-group form-control-lg">
+                            <label for="matricule" > Matricule: </label>
+                            <input type="text" name="matricule" id="matricule">
+                        </div>
+                        <div class="form-group form-control-lg">
+                            <label for="nom" >Nom: </label>
+                            <input type="text" name="nom" id="nom">
+                        </div>
+                    
+                        <div class="form-group form-control-lg ">
+                            <label for="prenom">Prénom:</label>
+                            <input type="text" name="prenom"  id="prenom">
+                        </div>
+                        <div class="form-group form-control-lg ">
+                            <label for="dnaissance">Date de naissance:</label>
+                            <input type="date" name="dates" id="dnaissance">
+
+                        </div>
+                   
+                        <div class="form-group form-control-lg ">
+                            <label for="lnaissance" >Lieu de naissance:</label>
+                            <input type="text" name="lnaissance" id="lnaissance">
+                       </div>
+                       <div class="form-group form-control-lg">  
+
+                        <label for="sexe" >Sexe: </label></br>
+
+                        <input type="radio" name="homme" id="homme">
+                        <label for="homme" id="sexe">Homme</label>
+
+                        <input type="radio" name="femme" id="femme">
+                        <label for="femme" >Femme</label>                  
+                    </div>
+
+                       <div class="form-group form-control-lg ">
+                            <label for="parcours">Parcours:</label>
+                            <select name="parcours" id="parcours">
+                                <option value="Developpement web " id="parcourss" selected>Developpement web</option>
+                                <option value="Data sciences">Data sciences</option>
+                                <option value="Art numérique">Art numérique</option>
+                            </select>
+                        </div>
+                       
+
+                    
+
+                    <div class="form-group form-control-lg ">  
+
+                        <label for="taille" >Taille: </label>
+                        <input type="number" name="taille" id="tailles">
+
+
+                    <label for="poids" >poids: </label>
+                    <input type="number" name="poids" id="poidss">
+
+                    </div>
+
+
+
+
+                    <h5 class="mt-5">Notes</h5>
+                    <div class="form-group form-control-lg ">  
+
+                        <label for="matiere" >Matieres:</label>
+                        <input type="text" name="matiere" id="matiere">
+                                        
+                        <label for="note" >Notes: </label>
+                        <input type="number" name="note" id="notes">
+
+                        <input type="button" value="Ajouter" class="bg-primary" id="btnajout" onclick="addCourse()"> </br>
+                    </div>
+
+                    <h5>liste matieres et notes</h5>
+                    <table class="table table-bordered table-hover" id="tableau2">
+                        <tr>
+                            <thead class="thead-light">
+                                <th>Matieres</th>
+                                <th>Notes</th>
+                            </thead>
+                        </tr>
+                    </table>
+
+
+                    <input type="button" value="Enregister" class="bg-primary" id="enreg" onclick="addStudent()">
+
+                </fieldset>
+
+        </form>
+    </div>
+    <div class="zonedetails mt-5" id="zone3" style="display: none;">
+        <p>nom et prenom:</p>
+        <p>Date et lieu de naissance:</p>
+        <p>sexe:</p>
+        <p>parcours:</p>
+        <p>taille:</p>
+        <p>poids:</p>
+        <h5>Notes</h5>
+        <table class="table table-bordered table-hover">
+            <tr>
+                <thead class="thead-light">
+                    <th>Matieres</th>
+                    <th>Notes</th>
+                   
+                </thead>
+            </tr>
+        </table>
+        <input type="button" value="Afficher" class="bg-primary" id="afficher">
+
+
+
+    </div>
+
+
+    </div>
+
+
+
+    <script src="js/etudiant.js"></script>
+    <script type="text/javascript" src="js/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.js"></script>
+    
+</body>
+</html>
